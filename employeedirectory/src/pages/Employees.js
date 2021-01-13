@@ -27,21 +27,14 @@ class Employees extends Component {
       .catch(err => console.log(err));
   }
 
-  handleInputChange = event => {
-    this.setState({ search: event.target.value });
+  handleInputChange = event => {   
+    console.log(this.state.results); 
+    const listEmployees = this.state.results.filter(res => res.name.last.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
+    console.log(event.target.value);
+    console.log(listEmployees);
+    this.setState({ results: listEmployees });
   };
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   API.getDogsOfBreed(this.state.search)
-  //     .then(res => {
-  //       if (res.data.status === "error") {
-  //         throw new Error(res.data.message);
-  //       }
-  //       this.setState({ results: res.data.message, error: "" });
-  //     })
-  //     .catch(err => this.setState({ error: err.message }));
-  // };
   render() {
     return (
 
