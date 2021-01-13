@@ -12,7 +12,8 @@ import SearchResults from "../components/SearchResults";
 class Employees extends Component {
   state = {
     search: "",    
-    results: [],
+    results: [], 
+    filterResults: [],   
     error: ""
   };
 
@@ -22,12 +23,13 @@ class Employees extends Component {
       .then(res =>{
         console.log(res.data.results);
         this.setState({ results: res.data.results });
+        this.setState({ filterResults: res.date.results});
         console.log(this.state.results);
       } )
       .catch(err => console.log(err));
   }
 
-  handleInputChange = event => {   
+  handleInputChange = event => {       
     console.log(this.state.results); 
     const listEmployees = this.state.results.filter(res => res.name.last.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
     console.log(event.target.value);
