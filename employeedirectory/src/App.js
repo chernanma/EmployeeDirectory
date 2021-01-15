@@ -1,24 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Employees from "./pages/Employees";
-
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <Navbar />
+  return (    
+      <div>       
         <Wrapper>
-          <Route exact path="/" component={Employees} />
-          <Route exact path="/employees" component={Employees} />         
+          <Employees></Employees>  
+          <Footer></Footer>
         </Wrapper>
-        <Footer />
-      </div>
-    </Router>
+      </div>   
   );
 }
 
