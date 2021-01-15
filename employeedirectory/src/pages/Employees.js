@@ -23,7 +23,7 @@ class Employees extends Component {
       .then(res =>{
         console.log(res.data.results);
         this.setState({ results: res.data.results });
-        this.setState({ filterResults: res.date.results});
+        this.setState({ filterResults: res.data.results});
         console.log(this.state.results);
       } )
       .catch(err => console.log(err));
@@ -31,17 +31,15 @@ class Employees extends Component {
 
   handleInputChange = event => {       
     console.log(this.state.results); 
-    const listEmployees = this.state.results.filter(res => res.name.last.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
-    console.log(event.target.value);
-    console.log(listEmployees);
-    this.setState({ results: listEmployees });
+    const listEmployees = this.state.results.filter(res => (res.name.first.toLowerCase() + " " + res.name.last.toLowerCase()).indexOf(event.target.value.toLowerCase()) >= 0);   
+    this.setState({ filterResults: listEmployees });
   };
 
   render() {
     return (
 
       <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+      <Hero backgroundImage="search.jpg">
         <h1>Employee Directory</h1>        
       </Hero>
       <Container style={{ marginTop: 30 }}>
@@ -61,7 +59,7 @@ class Employees extends Component {
                   handleInputChange={this.handleInputChange}
                   
                 />
-                <SearchResults results={this.state.results} />
+                <SearchResults results={this.state.filterResults} />
               </Container>
             </div>
           </Col>
