@@ -11,10 +11,12 @@ function CardEmployee(props) {
       <div className="card-body">
         <Row>
           <Col size="md-9">
-            <h2>Phone: {props.phone}</h2>
-            <h2>Email: {props.email}</h2>
-            <h2>Address: </h2>
-            <h2>Years Working: {props.age}</h2>
+            <h4>Phone: {props.phone}</h4>
+            <h4>Email: {props.email}</h4>
+            <h4>Street: {props.housenumber} {props.streetname}</h4>
+            <h4>City: {props.city}</h4> <h4> Zip Code: {props.zipcode} </h4>
+            <h4>State: {props.state}</h4>            
+            <h4>Years Working: {props.age}</h4>
           </Col>   
           <Col size="md-3">
             <img alt="Pic" src={props.image} className="img-fluid" />
