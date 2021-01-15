@@ -11,7 +11,8 @@ import SearchResults from "../components/SearchResults";
 
 class Employees extends Component {
   state = {
-    search: "",    
+    search: "",
+    sortby: "",    
     results: [], 
     filterResults: [],   
     error: ""
@@ -33,6 +34,27 @@ class Employees extends Component {
     console.log(this.state.results); 
     const listEmployees = this.state.results.filter(res => (res.name.first.toLowerCase() + " " + res.name.last.toLowerCase()).indexOf(event.target.value.toLowerCase()) >= 0);   
     this.setState({ filterResults: listEmployees });
+  };
+
+  sortBy = event => {
+    console.log(event.target.value.toLowerCase());
+    const sortOptionValue = event.target.value.toLowerCase();
+    if (sortOptionValue === 'first name'){
+      const listEmployeesSorted = this.state.results.sort((a,b) => (a.name.first > b.name.first) ? 1 : -1);
+      console.log(listEmployeesSorted);
+      this.setState({ filterResults: listEmployeesSorted });
+    }
+    if (sortOptionValue === 'last name'){
+      const listEmployeesSorted = this.state.results.sort((a,b) => (a.name.last > b.name.last) ? 1 : -1);
+      console.log(listEmployeesSorted);
+      this.setState({ filterResults: listEmployeesSorted });
+    }
+    if (sortOptionValue === 'years working'){
+      const listEmployeesSorted = this.state.results.sort((a,b) => (a.registered.age > b.registered.age) ? 1 : -1);
+      console.log(listEmployeesSorted);
+      this.setState({ filterResults: listEmployeesSorted });
+    }
+   
   };
 
   render() {
@@ -57,7 +79,7 @@ class Employees extends Component {
                 <SearchForm
                   
                   handleInputChange={this.handleInputChange}
-                  
+                  sortBy={this.sortBy}
                 />
                 <SearchResults results={this.state.filterResults} />
               </Container>
