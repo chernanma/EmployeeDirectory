@@ -14,6 +14,11 @@ function SearchResults(props) {
             email={result.email}
             image={result.picture.large}
             age={result.registered.age}
+            housenumber={result.location.street.number} 
+            streetname={result.location.street.name}
+            city={result.location.city}
+            zipcode={result.location.postcode}
+            state={result.location.state}            
           />            
         </li>
       ))}
