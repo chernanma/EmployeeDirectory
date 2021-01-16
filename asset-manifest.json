@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/chernanma/EmployeeDirectory/static/css/main.d680d249.chunk.css",
-    "main.js": "/chernanma/EmployeeDirectory/static/js/main.8ebe7c4d.chunk.js",
-    "main.js.map": "/chernanma/EmployeeDirectory/static/js/main.8ebe7c4d.chunk.js.map",
-    "runtime-main.js": "/chernanma/EmployeeDirectory/static/js/runtime-main.46db76b7.js",
-    "runtime-main.js.map": "/chernanma/EmployeeDirectory/static/js/runtime-main.46db76b7.js.map",
-    "static/css/2.ae9f1eb3.chunk.css": "/chernanma/EmployeeDirectory/static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.a0cc8959.chunk.js": "/chernanma/EmployeeDirectory/static/js/2.a0cc8959.chunk.js",
-    "static/js/2.a0cc8959.chunk.js.map": "/chernanma/EmployeeDirectory/static/js/2.a0cc8959.chunk.js.map",
-    "index.html": "/chernanma/EmployeeDirectory/index.html",
-    "static/css/2.ae9f1eb3.chunk.css.map": "/chernanma/EmployeeDirectory/static/css/2.ae9f1eb3.chunk.css.map",
-    "static/css/main.d680d249.chunk.css.map": "/chernanma/EmployeeDirectory/static/css/main.d680d249.chunk.css.map",
-    "static/js/2.a0cc8959.chunk.js.LICENSE.txt": "/chernanma/EmployeeDirectory/static/js/2.a0cc8959.chunk.js.LICENSE.txt"
+    "main.css": "/chernanma/EmployeeDirectory/employeedirectory/static/css/main.d680d249.chunk.css",
+    "main.js": "/chernanma/EmployeeDirectory/employeedirectory/static/js/main.8ebe7c4d.chunk.js",
+    "main.js.map": "/chernanma/EmployeeDirectory/employeedirectory/static/js/main.8ebe7c4d.chunk.js.map",
+    "runtime-main.js": "/chernanma/EmployeeDirectory/employeedirectory/static/js/runtime-main.8f677b6b.js",
+    "runtime-main.js.map": "/chernanma/EmployeeDirectory/employeedirectory/static/js/runtime-main.8f677b6b.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/chernanma/EmployeeDirectory/employeedirectory/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.a0cc8959.chunk.js": "/chernanma/EmployeeDirectory/employeedirectory/static/js/2.a0cc8959.chunk.js",
+    "static/js/2.a0cc8959.chunk.js.map": "/chernanma/EmployeeDirectory/employeedirectory/static/js/2.a0cc8959.chunk.js.map",
+    "index.html": "/chernanma/EmployeeDirectory/employeedirectory/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/chernanma/EmployeeDirectory/employeedirectory/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.d680d249.chunk.css.map": "/chernanma/EmployeeDirectory/employeedirectory/static/css/main.d680d249.chunk.css.map",
+    "static/js/2.a0cc8959.chunk.js.LICENSE.txt": "/chernanma/EmployeeDirectory/employeedirectory/static/js/2.a0cc8959.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.46db76b7.js",
+    "static/js/runtime-main.8f677b6b.js",
     "static/css/2.ae9f1eb3.chunk.css",
     "static/js/2.a0cc8959.chunk.js",
     "static/css/main.d680d249.chunk.css",
