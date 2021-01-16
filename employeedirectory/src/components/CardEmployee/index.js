@@ -4,10 +4,9 @@ import Row from "../Row";
 import Col from "../Col";
 
 function CardEmployee(props) {
-  const style={ width: "100%", height: "auto" };
-  
+   
   return (
-    <div className="card" style={style}>
+    <div className="card" >
       <div className="card-header"><h3>{props.firstname} {props.lastname}</h3></div>
       <div className="card-body">
         <Row>

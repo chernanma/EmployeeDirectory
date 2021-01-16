@@ -9,6 +9,7 @@ import SearchResults from "../components/SearchResults";
 
 
 class Employees extends Component {
+  // Creating state that contains variables to be used
   state = {
     search: "",
     sortby: "",    
@@ -17,7 +18,7 @@ class Employees extends Component {
     error: ""
   };
 
-  // When the component mounts, get a list of all available base breeds and update this.state.breeds
+  // When the component mounts, get a list of all Employees - Users from the API and updates the this.state.results and this.state.filterResults
   componentDidMount() {
     API.getRandomEmployee()
       .then(res =>{
@@ -29,12 +30,15 @@ class Employees extends Component {
       .catch(err => console.log(err));
   }
 
+  //Funtion that will be executed everytime a letter is entered in the search input and will filter the results 
   handleInputChange = event => {       
     console.log(this.state.results); 
+    //  Filtering Results
     const listEmployees = this.state.results.filter(res => (res.name.first.toLowerCase() + " " + res.name.last.toLowerCase()).indexOf(event.target.value.toLowerCase()) >= 0);   
     this.setState({ filterResults: listEmployees });
   };
 
+  // Function to sort result by option choosen from Sort by picklist
   sortBy = event => {
     console.log(event.target.value.toLowerCase());
     const sortOptionValue = event.target.value.toLowerCase();

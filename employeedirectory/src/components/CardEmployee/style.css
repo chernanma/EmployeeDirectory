@@ -3,12 +3,11 @@
   background-position: center;
   background-clip: content-box;
   border: 6px solid white;
-  height: 400px;
-  width: 400px;
+  height: auto;
+  width: auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 0 auto; 
 }
 
 .card .fa-spinner {
