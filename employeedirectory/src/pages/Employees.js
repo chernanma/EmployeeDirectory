@@ -4,7 +4,6 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import API from "../utils/API";
-import Alert from "../components/Alert";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 
@@ -61,23 +60,15 @@ class Employees extends Component {
     return (
 
       <div>
-      <Hero backgroundImage="search.jpg">
+      <Hero backgroundImage="search.jpg"  >
         <h1>Employee Directory</h1>        
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">        
             <div>
-              <Container style={{ minHeight: "80%" }}>
-                <h1 className="text-center">Search </h1>
-                <Alert
-                  type="danger"
-                  style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-                >
-                  {this.state.error}
-                </Alert>
-                <SearchForm
-                  
+              <Container style={{ minHeight: "80%" }}>             
+                <SearchForm                  
                   handleInputChange={this.handleInputChange}
                   sortBy={this.sortBy}
                 />
